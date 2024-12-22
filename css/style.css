@@ -710,7 +710,7 @@ header, footer {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 14px; /* Smaller arrow icons */
+    font-size: 6px; /* Smaller arrow icons */
 }
 
 
