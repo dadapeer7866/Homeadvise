@@ -661,7 +661,7 @@ header, footer {
     width: 90%;
     margin: 0 auto;
     position: relative; /* Ensures proper positioning for navigation buttons */
-    padding-bottom: 30px; /* Add space below the container for the pagination bullets */
+    padding-bottom: 50px; /* Space below for pagination bullets */
 }
 
 .swiper-slide {
@@ -680,11 +680,11 @@ header, footer {
 
 /* Pagination Bullets Styling */
 .swiper-pagination {
-    position: absolute; /* Positioned relative to the swiper-container */
-    bottom: -15px; /* Moves pagination below the container */
+    position: absolute;
+    bottom: -20px; /* Moves pagination below the Swiper container */
     width: 100%;
     text-align: center;
-    z-index: 10; /* Ensures it appears above other elements */
+    z-index: 10;
 }
 
 .swiper-pagination-bullet {
@@ -697,6 +697,22 @@ header, footer {
 .swiper-pagination-bullet-active {
     background: #007BFF; /* Active bullet color */
 }
+
+/* Navigation Button Styling */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 25px; /* Smaller arrow button width */
+    height: 25px; /* Smaller arrow button height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Round buttons */
+    color: white; /* Arrow color */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 14px; /* Smaller arrow icons */
+}
+
 
 
 /* Navigation Buttons */
@@ -720,4 +736,17 @@ header, footer {
 
 .swiper-pagination-bullet-active {
     background: #007BFF;
+}
+
+
+.whatsapp-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
 }
