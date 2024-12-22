@@ -660,6 +660,8 @@ header, footer {
 .swiper-container {
     width: 90%;
     margin: 0 auto;
+    position: relative; /* Ensures proper positioning for navigation buttons */
+    padding-bottom: 30px; /* Add space below the container for the pagination bullets */
 }
 
 .swiper-slide {
@@ -675,6 +677,27 @@ header, footer {
     object-fit: cover;
     border-radius: 8px;
 }
+
+/* Pagination Bullets Styling */
+.swiper-pagination {
+    position: absolute; /* Positioned relative to the swiper-container */
+    bottom: -15px; /* Moves pagination below the container */
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensures it appears above other elements */
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    transition: background 0.3s ease;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007BFF; /* Active bullet color */
+}
+
 
 /* Navigation Buttons */
 .swiper-button-next,
