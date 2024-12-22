@@ -530,6 +530,7 @@ p.elementor-heading-title {
     margin: 0;
 }
 
+/* Tablet screens */
 @media (max-width: 1024px) {
     .elementor-container {
         gap: 20px; /* Reduces gap for smaller screens */
@@ -541,16 +542,30 @@ p.elementor-heading-title {
     }
 }
 
+/* Mobile screens */
 @media (max-width: 768px) {
     .elementor-container {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        flex-direction: row; /* Horizontal layout */
+        overflow-x: auto; /* Enable horizontal scrolling if necessary */
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .elementor-column {
+        flex: 0 0 auto; /* Prevent items from stretching */
+        margin: 0 10px; /* Add some horizontal margin */
     }
 
     .elementor-image-box-wrapper {
-        max-width: 100%;
+        max-width: 100px; /* Further reduce the size of icons */
+    }
+
+    .elementor-heading-title {
+        font-size: 16px; /* Adjust font size for titles */
+        text-align: center;
     }
 }
+
 
 /* WhatsApp Button Styling */
 .whatsapp-btn {
