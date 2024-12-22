@@ -492,23 +492,19 @@ p.elementor-heading-title {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Space items evenly */
-    gap: 30px; 
+    gap: 20px; /* Reduced initial gap */
     padding: 0 10px; 
 }
 
 .elementor-column {
     flex: 0 0 auto;
     margin: 0;
+    max-width: 250px; /* Set a maximum width for each column */
 }
 
 @media (max-width: 1024px) {
     .elementor-container {
-        gap: 20px; 
-        justify-content: space-between; /* Maintain even spacing */
-    }
-
-    .elementor-image-box-wrapper {
-        max-width: 180px; 
+        gap: 15px; /* Reduced gap for smaller screens */
     }
 }
 
@@ -517,11 +513,11 @@ p.elementor-heading-title {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center; /* Center items vertically */
         justify-content: center; /* Center items horizontally */
-        gap: 20px; 
+        gap: 15px; 
     }
 
-    .elementor-image-box-wrapper {
-        max-width: 150px; 
+    .elementor-column {
+        max-width: 200px; /* Further reduce width for smaller screens */
     }
 }
 
