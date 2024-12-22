@@ -558,7 +558,7 @@ p.elementor-heading-title {
 
 /* Fix "Our Services" heading alignment */
 .elementor-heading-title {
-    text-align: left !important; /* Ensures heading stays aligned to the left */
+    text-align: center !important; /* Ensures heading stays aligned to the left */
     margin-left: 0; /* Removes any unintended margin */
     margin-bottom: 20px; /* Adds spacing between heading and content */
     width: 100%; /* Makes the heading span the full width */
