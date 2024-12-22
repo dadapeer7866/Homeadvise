@@ -516,12 +516,13 @@ p.elementor-heading-title {
     color: #007bff;
 }
 
+
 /* Grid layout for services */
 .elementor-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align items to the left */
-    gap: 30px; /* Sets the gap dynamically between boxes */
+    justify-content: flex-start; /* Align items horizontally to the left */
+    gap: 30px; /* Sets the gap dynamically between items */
     padding: 0 10px;
 }
 
@@ -533,22 +534,25 @@ p.elementor-heading-title {
 @media (max-width: 1024px) {
     .elementor-container {
         gap: 20px; /* Reduces gap for smaller screens */
-        justify-content: flex-start; /* Maintains left alignment */
+        justify-content: flex-start; /* Keeps items aligned to the left horizontally */
     }
 
     .elementor-image-box-wrapper {
-        max-width: 180px; /* Slightly reduced size */
+        max-width: 180px; /* Slightly reduced size for icons */
     }
 }
 
 @media (max-width: 768px) {
     .elementor-container {
-        flex-direction: column; /* Stacks items vertically on smaller screens */
+        flex-direction: row; /* Ensures items are aligned horizontally */
         align-items: flex-start; /* Keeps left alignment */
+        flex-wrap: nowrap; /* Prevents vertical stacking */
+        overflow-x: auto; /* Adds horizontal scrolling for smaller screens if needed */
+        gap: 15px;
     }
 
     .elementor-image-box-wrapper {
-        max-width: 100%;
+        max-width: 150px; /* Adjust size further for smaller screens */
     }
 }
 
@@ -556,7 +560,8 @@ p.elementor-heading-title {
 .elementor-heading-title {
     text-align: left !important; /* Ensures heading stays aligned to the left */
     margin-left: 0; /* Removes any unintended margin */
-    margin-right: auto;
+    margin-bottom: 20px; /* Adds spacing between heading and content */
+    width: 100%; /* Makes the heading span the full width */
 }
 
 
