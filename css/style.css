@@ -734,6 +734,7 @@ p.elementor-heading-title {
 
 
 
+
 /* Universal reset to remove unnecessary spacing */
 * {
     margin: 0;
@@ -753,7 +754,6 @@ section {
 section > * {
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 0;
 }
 
 /* Optional: Use gap control for Flexbox or Grid layouts */
@@ -768,3 +768,4 @@ header, footer {
     margin: 0;
     padding: 0;
 }
+
