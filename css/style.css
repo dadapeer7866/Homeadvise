@@ -730,3 +730,41 @@ p.elementor-heading-title {
 .whatsapp-btn i {
     font-size: 24px; /* WhatsApp icon size */
 }
+
+
+
+
+/* Universal reset to remove unnecessary spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Adjust margin and padding for sections */
+section {
+    margin-top: 10px; /* Adjust to reduce space between sections */
+    margin-bottom: 10px; /* Adjust to reduce space between sections */
+    padding-top: 0; /* Ensure internal padding doesn't add space */
+    padding-bottom: 0; /* Ensure internal padding doesn't add space */
+}
+
+/* For containers or divs inside sections, ensure no extra spacing */
+section > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+/* Optional: Use gap control for Flexbox or Grid layouts */
+.container {
+    display: flex; /* Or grid, depending on your layout */
+    flex-direction: column;
+    gap: 10px; /* Controls the space between items in the container */
+}
+
+/* Ensure header and footer don't add extra spacing */
+header, footer {
+    margin: 0;
+    padding: 0;
+}
