@@ -605,38 +605,41 @@ p.elementor-heading-title {
     z-index: 1;
 }
 
-
-/* Universal reset to remove unnecessary spacing */
+/* Universal reset to remove all unnecessary spacing */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     box-sizing: border-box;
 }
 
-/* Adjust margin and padding for sections */
+/* Force sections to have minimal spacing */
 section {
-    margin-top: 10px; /* Adjust to reduce space between sections */
-    margin-bottom: 10px; /* Adjust to reduce space between sections */
-    padding-top: 0; /* Ensure internal padding doesn't add space */
-    padding-bottom: 0; /* Ensure internal padding doesn't add space */
+    margin: 0 !important; /* Remove all margins */
+    padding: 0 !important; /* Remove all paddings */
 }
 
-/* For containers or divs inside sections, ensure no extra spacing */
+/* Optional: Add minimal spacing for better readability */
+section + section {
+    margin-top: 10px !important; /* Adjust the gap between sections */
+}
+
+/* Override spacing from containers inside sections */
 section > * {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Optional: Use gap control for Flexbox or Grid layouts */
+/* Ensure the body and main container also don't add gaps */
+body, html, main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Handle flex or grid layouts to control gaps */
 .container {
-    display: flex; /* Or grid, depending on your layout */
+    display: flex;
     flex-direction: column;
-    gap: 10px; /* Controls the space between items in the container */
+    gap: 10px; /* Adjust as needed */
+    margin: 0 !important;
+    padding: 0 !important;
 }
-
-/* Ensure header and footer don't add extra spacing */
-header, footer {
-    margin: 0;
-    padding: 0;
-}
-
