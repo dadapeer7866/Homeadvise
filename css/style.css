@@ -120,7 +120,7 @@
         padding: 0;
     }
 
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -148,20 +148,17 @@
         transform-origin: 0% 0%;
         opacity: 0;
         visibility: hidden;
-        transition: .5s;
-        
+        transition: transform 0.5s, opacity 0.5s;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
         transform: rotateX(0deg);
         visibility: visible;
-        transition: .5s;
         opacity: 1;
     }
 }
 
-
-/*** Header ***/
+/* Header adjustments */
 @media (min-width: 992px) {
     .header {
         margin-top: -120px;
@@ -187,9 +184,9 @@
     justify-content: center;
     color: #FFFFFF;
     background: var(--primary);
-    border-radius: 40px;
+    border-radius: 50%;
     font-size: 20px;
-    transition: .5s;
+    transition: background 0.5s;
 }
 
 .header-carousel .owl-nav .owl-prev:hover,
@@ -207,20 +204,18 @@
     color: #DDDDDD;
 }
 
-
-/*** Icon ***/
+/* Icon styling */
 .icon {
     padding: 15px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF !important;
-    border-radius: 50px;
-    border: 1px dashed var(--primary) !important;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: 1px dashed var(--primary);
 }
 
-
-/*** About ***/
+/* About section */
 .about-img img {
     position: relative;
     z-index: 2;
@@ -238,12 +233,11 @@
     z-index: 1;
 }
 
-
-/*** Category ***/
+/* Category adjustments */
 .cat-item div {
     background: #FFFFFF;
     border: 1px dashed rgba(0, 185, 142, .3);
-    transition: .5s;
+    transition: background 0.5s, border-color 0.5s;
 }
 
 .cat-item:hover div {
@@ -252,125 +246,52 @@
 }
 
 .cat-item div * {
-    transition: .5s;
+    transition: color 0.5s;
 }
 
 .cat-item:hover div * {
     color: #FFFFFF !important;
 }
 
-
-/*** Property List ***/
-.nav-pills .nav-item .btn {
-    color: var(--dark);
+/* Grid layout for services */
+.elementor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 10px;
 }
 
-.nav-pills .nav-item .btn:hover,
-.nav-pills .nav-item .btn.active {
-    color: #FFFFFF;
+.elementor-column {
+    flex: 0 0 auto;
+    margin: 0;
 }
 
-.property-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
-}
+@media (max-width: 1024px) {
+    .elementor-container {
+        gap: 20px;
+    }
 
-.property-item img {
-    transition: .5s;
-}
-
-.property-item:hover img {
-    transform: scale(1.1);
-}
-
-.property-item .border-top {
-    border-top: 1px dashed rgba(0, 185, 142, .3) !important;
-}
-
-.property-item .border-end {
-    border-right: 1px dashed rgba(0, 185, 142, .3) !important;
-}
-
-
-/*** Team ***/
-.team-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.team-item .btn {
-    color: var(--primary);
-    background: #FFFFFF;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
-}
-
-.team-item .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-.team-item:hover {
-    border-color: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary {
-    background: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary i {
-    color: var(--secondary) !important;
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-@media (min-width: 576px) {
-    .testimonial-carousel {
-        padding-left: 4rem;
-        padding-right: 4rem;
+    .elementor-image-box-wrapper {
+        max-width: 180px;
     }
 }
 
-.testimonial-carousel .testimonial-item .border {
-    border: 1px dashed rgba(0, 185, 142, .3) !important;
+@media (max-width: 768px) {
+    .elementor-container {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .elementor-image-box-wrapper {
+        max-width: 150px;
+    }
 }
 
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    top: calc(50% - 20px);
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: var(--primary);
-    border-radius: 40px;
-    font-size: 20px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--dark);
-}
-
-
-/*** Footer ***/
+/* Footer improvements */
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 35px;
@@ -379,9 +300,9 @@
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 35px;
-    transition: .3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: color 0.3s, border-color 0.3s;
 }
 
 .footer .btn.btn-social:hover {
@@ -397,40 +318,23 @@
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
+    transition: letter-spacing 0.3s;
 }
 
 .footer .btn.btn-link:hover {
     letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .form-control {
-    border-color: rgba(255,255,255,0.5);
 }
 
 .footer .copyright {
     padding: 25px 0;
     font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-menu a:last-child {
@@ -439,122 +343,6 @@
     border-right: none;
 }
 
-/* General section styling */
-.elementor-section {
-    padding: 10px 0;
-    background-color: #f8f8f8;
-    text-align: center;
-}
-
-/* Heading styles */
-.elementor-heading-title {
-    font-family: 'Arial', sans-serif;
-    margin-bottom: 20px;
-}
-
-.elementor-heading-title.elementor-size-default {
-    color: #333;
-}
-
-h3.elementor-heading-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-p.elementor-heading-title {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Image box container */
-.elementor-image-box-wrapper {
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    max-width: 200px; /* Adjusted box size */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.elementor-image-box-wrapper:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Image styling */
-.elementor-image-box-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Title and link styling */
-.elementor-image-box-title {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #333;
-    text-transform: uppercase;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.elementor-image-box-title a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
-}
-
-.elementor-image-box-title a:hover {
-    color: #007bff;
-}
-
-
-/* Grid layout for services */
-.elementor-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Align items horizontally to the left */
-    gap: 30px; /* Sets the gap dynamically between items */
-    padding: 0 10px;
-}
-
-.elementor-column {
-    flex: 0 0 auto;
-    margin: 0;
-}
-
-@media (max-width: 1024px) {
-    .elementor-container {
-        gap: 20px; /* Reduces gap for smaller screens */
-        justify-content: flex-start; /* Keeps items aligned to the left horizontally */
-    }
-
-    .elementor-image-box-wrapper {
-        max-width: 180px; /* Slightly reduced size for icons */
-    }
-}
-
-@media (max-width: 768px) {
-    .elementor-container {
-        flex-direction: row; /* Ensures items are aligned horizontally */
-        align-items: flex-start; /* Keeps left alignment */
-        flex-wrap: nowrap; /* Prevents vertical stacking */
-        overflow-x: auto; /* Adds horizontal scrolling for smaller screens if needed */
-        gap: 15px;
-    }
-
-    .elementor-image-box-wrapper {
-        max-width: 150px; /* Adjust size further for smaller screens */
-    }
-}
 
 /* Fix "Our Services" heading alignment */
 .elementor-heading-title {
