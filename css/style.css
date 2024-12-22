@@ -487,45 +487,81 @@ p.elementor-heading-title {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Image styling */
+.elementor-image-box-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Title and link styling */
+.elementor-image-box-title {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.elementor-image-box-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.elementor-image-box-title a:hover {
+    color: #007bff;
+}
+
+
 /* Grid layout for services */
 .elementor-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Space items evenly */
-    gap: 20px; /* Reduced initial gap */
-    padding: 0 10px; 
+    justify-content: flex-start; /* Align items horizontally to the left */
+    gap: 30px; /* Sets the gap dynamically between items */
+    padding: 0 10px;
 }
 
 .elementor-column {
     flex: 0 0 auto;
     margin: 0;
-    max-width: 250px; /* Set a maximum width for each column */
 }
 
 @media (max-width: 1024px) {
     .elementor-container {
-        gap: 15px; /* Reduced gap for smaller screens */
+        gap: 20px; /* Reduces gap for smaller screens */
+        justify-content: flex-start; /* Keeps items aligned to the left horizontally */
+    }
+
+    .elementor-image-box-wrapper {
+        max-width: 180px; /* Slightly reduced size for icons */
     }
 }
 
 @media (max-width: 768px) {
     .elementor-container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
-        gap: 15px; 
+        flex-direction: row; /* Ensures items are aligned horizontally */
+        align-items: flex-start; /* Keeps left alignment */
+        flex-wrap: nowrap; /* Prevents vertical stacking */
+        overflow-x: auto; /* Adds horizontal scrolling for smaller screens if needed */
+        gap: 15px;
     }
 
-    .elementor-column {
-        max-width: 200px; /* Further reduce width for smaller screens */
+    .elementor-image-box-wrapper {
+        max-width: 150px; /* Adjust size further for smaller screens */
     }
 }
 
 /* Fix "Our Services" heading alignment */
 .elementor-heading-title {
-    text-align: left; 
-    margin-bottom: 20px; 
-    width: 100%; 
+    text-align: left !important; /* Ensures heading stays aligned to the left */
+    margin-left: 0; /* Removes any unintended margin */
+    margin-bottom: 20px; /* Adds spacing between heading and content */
+    width: 100%; /* Makes the heading span the full width */
 }
 
 
