@@ -520,7 +520,7 @@ p.elementor-heading-title {
 .elementor-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; /* Ensures even spacing between items */
+    justify-content: flex-start; /* Align items to the left */
     gap: 30px; /* Sets the gap dynamically between boxes */
     padding: 0 10px;
 }
@@ -530,11 +530,10 @@ p.elementor-heading-title {
     margin: 0;
 }
 
-/* Tablet screens */
 @media (max-width: 1024px) {
     .elementor-container {
         gap: 20px; /* Reduces gap for smaller screens */
-        justify-content: space-around; /* Adjusts alignment */
+        justify-content: flex-start; /* Maintains left alignment */
     }
 
     .elementor-image-box-wrapper {
@@ -542,29 +541,24 @@ p.elementor-heading-title {
     }
 }
 
-/* Mobile screens */
 @media (max-width: 768px) {
     .elementor-container {
-        flex-wrap: nowrap; /* Prevent wrapping */
-        flex-direction: row; /* Horizontal layout */
-        overflow-x: auto; /* Enable horizontal scrolling if necessary */
-        justify-content: flex-start; /* Align items to the start */
-    }
-
-    .elementor-column {
-        flex: 0 0 auto; /* Prevent items from stretching */
-        margin: 0 10px; /* Add some horizontal margin */
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        align-items: flex-start; /* Keeps left alignment */
     }
 
     .elementor-image-box-wrapper {
-        max-width: 100px; /* Further reduce the size of icons */
-    }
-
-    .elementor-heading-title {
-        font-size: 16px; /* Adjust font size for titles */
-        text-align: center;
+        max-width: 100%;
     }
 }
+
+/* Fix "Our Services" heading alignment */
+.elementor-heading-title {
+    text-align: left !important; /* Ensures heading stays aligned to the left */
+    margin-left: 0; /* Removes any unintended margin */
+    margin-right: auto;
+}
+
 
 
 /* WhatsApp Button Styling */
