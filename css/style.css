@@ -660,7 +660,6 @@ header, footer {
 .swiper-container {
     width: 90%;
     margin: 0 auto;
-    position: relative; /* Ensures children like pagination are positioned relative to this container */
 }
 
 .swiper-slide {
@@ -675,37 +674,6 @@ header, footer {
     max-height: 100%;
     object-fit: cover;
     border-radius: 8px;
-}
-
-/* Fix for Pagination Bullets */
-.swiper-pagination {
-    position: absolute; /* Keep it within the swiper container */
-    bottom: 10px; /* Adjust to place bullets correctly above any conflicting content */
-    width: 100%;
-    text-align: center;
-    z-index: 10; /* Ensure it appears above other elements */
-}
-
-.swiper-pagination-bullet {
-    background: #ccc;
-    opacity: 1;
-    transition: background 0.3s ease;
-    margin: 0 5px; /* Add spacing between bullets */
-}
-
-.swiper-pagination-bullet-active {
-    background: #007BFF; /* Active bullet color */
-}
-
-/* Responsive Fix */
-@media screen and (max-width: 768px) {
-    .swiper-slide {
-        height: 100px; /* Adjust height for smaller screens */
-    }
-
-    .swiper-pagination {
-        bottom: 5px; /* Adjust bottom spacing for mobile */
-    }
 }
 
 /* Navigation Buttons */
