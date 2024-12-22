@@ -733,36 +733,42 @@ p.elementor-heading-title {
 
 
 
-
-/* Universal reset to remove unnecessary spacing */
+/* Universal reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Adjust margin and padding for sections */
+/* Ensure no overflow */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove section spacing */
 section {
-    margin-top: 0; /* Removed unnecessary space between sections */
-    margin-bottom: 0; /* Removed unnecessary space between sections */
-    padding-top: 0; /* Ensure internal padding doesn't add space */
-    padding-bottom: 0; /* Ensure internal padding doesn't add space */
+    margin: 0;
+    padding: 0;
 }
 
-/* For containers or divs inside sections, ensure no extra spacing */
-section > * {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Optional: Use gap control for Flexbox or Grid layouts */
+/* Control container spacing */
 .container {
-    display: flex; /* Or grid, depending on your layout */
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-    gap: 0; /* Set gap to 0 to remove space between elements */
+    gap: 0;
 }
 
-/* Ensure header and footer don't add extra spacing */
+/* Ensure carousel or sliders don't overflow */
+.carousel, .carousel-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Header and footer adjustments */
 header, footer {
     margin: 0;
     padding: 0;
@@ -771,7 +777,7 @@ header, footer {
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     .container {
-        gap: 0; /* Ensure gap is controlled for mobile screens */
+        gap: 0;
     }
 }
 
