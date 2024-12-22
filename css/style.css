@@ -604,3 +604,28 @@ p.elementor-heading-title {
     transform: skew(20deg);
     z-index: 1;
 }
+
+
+section {
+    margin-top: 20px; /* Adjust this value as needed */
+    margin-bottom: 20px; /* Adjust this value as needed */
+    padding-top: 10px; /* Adjust this value as needed */
+    padding-bottom: 10px; /* Adjust this value as needed */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding-top: 1px; /* Prevents margin collapsing */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between sections */
+}
