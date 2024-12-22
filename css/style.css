@@ -640,3 +640,61 @@ header, footer {
     padding: 0;
 }
 
+
+
+
+/* General Section Styles */
+.slider-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.slider-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Swiper Styling */
+.swiper-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Adjust as needed */
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #007BFF;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    transition: background 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007BFF;
+}

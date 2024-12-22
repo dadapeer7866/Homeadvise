@@ -32,6 +32,9 @@
 
     <!-- Include Font Awesome for the WhatsApp Icon -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Include Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
 </head>
 
@@ -684,6 +687,26 @@
         <!-- Team End -->
 
 
+        <section class="slider-section">
+            <h3 class="slider-title">Our Partners</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/1.png" alt="Partner 1"></div>
+                    <div class="swiper-slide"><img src="img/2.png" alt="Partner 2"></div>
+                    <div class="swiper-slide"><img src="img/3.png" alt="Partner 3"></div>
+                    <div class="swiper-slide"><img src="img/4.png" alt="Partner 4"></div>
+                    <div class="swiper-slide"><img src="img/5.png" alt="Partner 5"></div>
+                    <div class="swiper-slide"><img src="img/6.png" alt="Partner 6"></div>
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        
+
         <!-- Testimonial Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -833,6 +856,37 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Include Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+        },
+    });
+</script>
+
 </body>
 
 </html>
