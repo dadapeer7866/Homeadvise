@@ -734,7 +734,6 @@ p.elementor-heading-title {
 
 
 
-
 /* Universal reset to remove unnecessary spacing */
 * {
     margin: 0;
@@ -744,8 +743,8 @@ p.elementor-heading-title {
 
 /* Adjust margin and padding for sections */
 section {
-    margin-top: 10px; /* Adjust to reduce space between sections */
-    margin-bottom: 10px; /* Adjust to reduce space between sections */
+    margin-top: 0; /* Removed unnecessary space between sections */
+    margin-bottom: 0; /* Removed unnecessary space between sections */
     padding-top: 0; /* Ensure internal padding doesn't add space */
     padding-bottom: 0; /* Ensure internal padding doesn't add space */
 }
@@ -760,12 +759,19 @@ section > * {
 .container {
     display: flex; /* Or grid, depending on your layout */
     flex-direction: column;
-    gap: 10px; /* Controls the space between items in the container */
+    gap: 0; /* Set gap to 0 to remove space between elements */
 }
 
 /* Ensure header and footer don't add extra spacing */
 header, footer {
     margin: 0;
     padding: 0;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .container {
+        gap: 0; /* Ensure gap is controlled for mobile screens */
+    }
 }
 
