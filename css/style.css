@@ -521,8 +521,9 @@ p.elementor-heading-title {
 .elementor-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align items horizontally to the left */
-    gap: 30px; /* Sets the gap dynamically between items */
+    align-items: center;
+    justify-content: space-around; /* Align items horizontally to the left */
+    gap: 100px; /* Sets the gap dynamically between items */
     padding: 0 10px;
 }
 
@@ -558,6 +559,7 @@ p.elementor-heading-title {
 
 /* Fix "Our Services" heading alignment */
 .elementor-heading-title {
+    color: #007BFF !important ;
     text-align: center !important; /* Ensures heading stays aligned to the left */
     margin-left: 0; /* Removes any unintended margin */
     margin-bottom: 20px; /* Adds spacing between heading and content */
