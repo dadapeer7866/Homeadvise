@@ -698,34 +698,6 @@ header, footer {
     background: #007BFF; /* Active bullet color */
 }
 
-/* Navigation Button Styling */
-.swiper-button-next,
-.swiper-button-prev {
-    width: 25px; /* Smaller arrow button width */
-    height: 25px; /* Smaller arrow button height */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%; /* Round buttons */
-    color: white; /* Arrow color */
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 14px; /* Smaller arrow icons */
-}
-
-
-
-/* Navigation Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    color: #000000;
-}
 
 /* Pagination Dots */
 .swiper-pagination-bullet {
