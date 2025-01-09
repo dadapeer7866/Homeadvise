@@ -783,11 +783,69 @@ header, footer {
     }
 }
 
-/* CSS to make the logo fit and remove borders */
+
+/* Navbar container */
+.nav-bar {
+    background: #ffffff; /* White background retained */
+    position: sticky; /* Navbar sticks to the top */
+    top: 0; /* Ensures it starts at the top */
+    z-index: 1050; /* Higher z-index to stay above content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    border-bottom: 1px solid #eaeaea; /* Clean bottom border */
+}
+
+/* Logo styling */
 .logo-img {
-    max-width: 100%; /* Ensures the image fits the container */
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Removes extra spacing */
-    border: none; /* Removes borders */
-    margin: 0 auto; /* Centers the image if needed */
+    max-width: 250px; /* Logo size adjusted */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 0 0 -20px; /* Push the logo to the left */
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    color: #333; /* Dark text for good contrast on white */
+    font-size: 16px; /* Font size for readability */
+    padding: 10px 15px; /* Spacing for clickable area */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Highlight on hover */
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    color: #007bff; /* Highlight color for active link */
+}
+
+/* Navbar toggler (for mobile) */
+.navbar-toggler {
+    border: none; /* Clean toggler button */
+    background: transparent; /* Transparent for better look */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    color: #fff;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-btn:hover {
+    color: #fff;
+    background-color: #20c157;
+}
+
+/* Sticky behavior adjustment for small screens */
+@media (max-width: 992px) {
+    .nav-bar {
+        position: relative; /* Prevents sticky issues on small devices */
+    }
 }
