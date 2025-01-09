@@ -783,3 +783,11 @@ header, footer {
     }
 }
 
+/* CSS to make the logo fit and remove borders */
+.logo-img {
+    max-width: 100%; /* Ensures the image fits the container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra spacing */
+    border: none; /* Removes borders */
+    margin: 0 auto; /* Centers the image if needed */
+}
