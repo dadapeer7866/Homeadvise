@@ -799,7 +799,7 @@ header, footer {
     max-width: 250px; /* Logo size adjusted */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure proper alignment */
-    margin: 0 0 0 -20px; /* Push the logo to the left */
+    margin: 0 0 0 -50px; /* Push the logo to the left */
 }
 
 /* Navbar links */
